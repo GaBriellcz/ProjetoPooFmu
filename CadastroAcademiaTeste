@@ -1,0 +1,90 @@
+// Esse foi o código que fiz na semana passada para ter uma ideia do projeto.
+
+package aps_poo;
+
+public class APS_POO {
+
+    public static void main(String[] args) {
+        CadastroAcademia c = new CadastroAcademia();
+        System.out.println("Cadastro");
+        c.nome = "Pedro";
+        c.idade = 21; 
+        c.endereço = "Rua Emilio Retrosi";
+        c.telefone = 1199999;
+        c.cpf = 88787878;
+        c.rg  = 24242424;
+        c.Cadastro();
+       
+        CadastroFuncionario f = new CadastroFuncionario();
+        System.out.println("Cadastro Funcionario");
+        f.carteiraTrabalho = 0001;
+        f.horario = 0800f;
+        f.área = " Professor";
+        f.Cadastro();
+    }
+    
+}
+
+//Cria uma classe para CadastroAcademia
+
+package aps_poo;
+
+public class CadastroAcademia {
+    String nome;
+    int cpf;
+    int rg;
+    int idade;
+    String endereço;
+    int telefone;
+      
+    public void Cadastro(){
+        System.out.println("---------------------------");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("RG: " + this.rg);
+        System.out.println("Idade: " + this.idade);
+        System.out.println("Endereço: " + this.endereço);
+        System.out.println("Telefone: " + this.telefone);
+        System.out.println("---------------------------");
+    }
+    
+}
+
+// Criar mais duas Classes CadastroCliente e CadastroFuncionario
+
+// CadastroCliente 
+package aps_poo;
+
+public class CadastroCliente extends CadastroAcademia {
+    float altura;
+    float peso;
+    float porcentualGordura;
+    String objetivo;
+    String sangue;
+    String status;
+    
+    
+}
+
+//CadastroFuncionario
+
+package aps_poo;
+
+public class CadastroFuncionario extends CadastroAcademia {
+    double carteiraTrabalho;
+    double salario;
+   float horario;
+    String área;
+  
+            
+    public void Cadastro() {
+        System.out.println("---------------------------------");
+        System.out.println("Número da Carteira de Trabalho: " + this.carteiraTrabalho);
+        System.out.println("Horário de Trabalho: "+ this.horario);
+        System.out.println("Área que esta trabalhando:"+ this.área);
+        salario = 1000;
+        System.out.println("Salario atual: "+ this.salario);
+        System.out.println("---------------------------------");
+        
+    }
+}
