@@ -1,20 +1,54 @@
 package aps_poo;
 
 public class CadastroFuncionario extends CadastroAcademia {
-    double carteiraTrabalho;
-    double salario;
-   float horario;
-    String área;
+    protected double carteiraTrabalho;
+    protected float salario;
+    protected float horario;
+    protected String área;
   
-            
-    public void Cadastro() {
-        //System.out.println("---------------------------------");
-        System.out.println("Número da Carteira de Trabalho: " + this.carteiraTrabalho);
-        System.out.println("Horário de Trabalho: "+ this.horario);
-        System.out.println("Área que esta trabalhando:"+ this.área);
-        salario = 1000;
-        System.out.println("Salario atual: "+ this.salario);
-        //System.out.println("---------------------------------");
-        
+    
+    
+    CadastroFuncionario(){
+    salario = 1000.00f;
     }
+
+    public double getCarteiraTrabalho() {
+        return carteiraTrabalho;
+    }
+
+    public void setCarteiraTrabalho(double carteiraTrabalho) {
+        this.carteiraTrabalho = carteiraTrabalho;
+    }
+
+    public float getSalario() {
+        return salario;
+    }
+
+    public void setSalario(float salario) {
+        this.salario = salario;
+    }
+
+    public float getHorario() {
+        return horario;
+    }
+
+    public void setHorario(float horario) {
+        this.horario = horario;
+    }
+
+    public String getÁrea() {
+        return área;
+    }
+
+    public void setÁrea(String área) {
+        this.área = área;
+    }
+
+    @Override
+    public String toString() {
+        return  " Carteira de Trabalho = " + carteiraTrabalho + "\n Salario = " + salario + "\n Horario = " + horario + "\n Área = " + área ;
+    }
+    
+    
+    
 }
